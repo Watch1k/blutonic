@@ -1,0 +1,80 @@
+extend includes/_layout
+
+block title
+	title Contact
+
+block header
+	header.header
+		.header__container.container
+			a.header__logo(href='index.html')
+				img.header__logo-img(src='img/logo.png' srcset='img/logo@2x.png 2x' alt='logo')
+			button.header__nav-toggle
+				span.header__icon
+block content
+	.map-wrap
+		.map#map
+
+	//begin section
+	section.section.contact
+		.container
+			.contact__in
+				.contact__col
+					.contact__title.title.title_sm Our Office
+					.contact__position
+						.contact__row
+							.contact__address bluTonic, Inc.<br>5757 Wilshire Boulevard<br>Suite 601<br>Los Angeles, CA 90036
+						.contact__row
+							.contact__subtitle Display/Mobile/Video Advertising:
+							a.contact__link(href='mailto:display@bluTonic.com') display@bluTonic.com
+						.contact__row
+							.contact__subtitle Lead Generation & Affiliate Marketing:
+							a.contact__link(href='mailto:leads@bluTonic.com') leads@bluTonic.com
+						.contact__row
+							.contact__subtitle Search & PPC Marketing:
+							a.contact__link(href='mailto:search@bluTonic.com') search@bluTonic.com
+					.contact__logo
+						img.contact__img(src='img/content/footer-logo.png' alt='image')
+				.contact__col
+					.contact__title.title.title_sm Contact Us
+					//begin contact-form
+					form.contact__form.form(action='#')
+						.form__field.form__field_half
+							input.form__input(type='text' placeholder='First Name')
+							input.form__input(type='text' placeholder='Last Name')
+						.form__field.form__field_half
+							input.form__input(type='text' placeholder='Email')
+							input.form__input(type='text' placeholder='Company')
+						.form__field
+							textarea.form__area(placeholder='Message...')
+						.form__field.form__field_submit
+							button.form__submit.blue-btn(type='submit') Send <i class='icon'></i>
+					//end contact-form
+	//end section
+
+block footer
+	footer.footer
+		.footer__bot
+			.container
+				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.
+
+block js
+	script.
+		function initMap() {
+			var myLatLng = {lat: 34.0627069, lng: -118.3539114};
+			var mapProp = {
+				center: myLatLng,
+				zoom: 12,
+				scrollwheel: false,
+				draggable: true,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map"), mapProp);
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'bluTonic, Inc.'
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initMap);
+	script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCvPiVe7YAjq0L-k9SvcDojzZrgBH46vds&callback=initMap" async defer)
+	script(src="js/app.js")

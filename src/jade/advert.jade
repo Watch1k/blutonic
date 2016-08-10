@@ -1,0 +1,181 @@
+extend includes/_layout
+
+block title
+	title Advertisers
+
+block header
+	header.header
+		.header__container.container
+			a.header__logo(href='index.html')
+				img.header__logo-img(src='img/logo.png' srcset='img/logo@2x.png 2x' alt='logo')
+			button.header__nav-toggle
+				span.header__icon
+block content
+	//begin subheader
+	.subheader.subheader_advert
+		.subheader__title.container Advertisers
+			span.subheader__subtitle One portal for all media formats across all publishers.
+	//end subheader
+
+	//begin section
+	section.section.advert.advert_bg
+		.container
+			.advert__container
+				.section__title.title Platforms
+				.section__subtitle.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				//begin media
+				.media
+					.media__item
+						.media__avatar
+							img.media__img(src='img/content/advert-desktop.png' srcset='img/content/advert-desktop@2x.png 2x' alt='image')
+						.media__title Desktop
+					.media__item
+						.media__avatar
+							img.media__img(src='img/content/advert-mobile.png' srcset='img/content/advert-mobile@2x.png 2x' alt='image')
+						.media__title Mobile
+					.media__item
+						.media__avatar
+							img.media__img(src='img/content/advert-tv.png' srcset='img/content/advert-tv@2x.png 2x' alt='image')
+						.media__title TV
+				//end media
+	//end section
+
+	//begin section
+	section.section.advert
+		.container
+			.advert__container
+				.section__title.title Media
+				.section__subtitle.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				//begin media
+				.media
+					.media__item
+						.media__avatar
+							img.media__img(src='img/content/advert-video.png' srcset='img/content/advert-video@2x.png 2x' alt='image')
+						.media__title Video
+					.media__item
+						.media__avatar
+							img.media__img(src='img/content/advert-display.png' srcset='img/content/advert-display@2x.png 2x' alt='image')
+						.media__title Display
+					.media__item
+						.media__avatar
+							img.media__img(src='img/content/advert-native.png' srcset='img/content/advert-native@2x.png 2x' alt='image')
+						.media__title Native
+				//end media
+	//end section
+
+	//begin section
+	section.section.advert.advert_bg-2
+		.container
+			.advert__container
+				.section__title.title.title_white Inventory Access
+				.section__subtitle.subtitle.subtitle_white With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				//begin media
+				.media.media_4.media_white
+					.media__item
+						.media__avatar
+							i.icon.icon-advert-service
+						.media__title.media__title_mod Managed Services
+					.media__item
+						.media__avatar
+							i.icon.icon-advert-tag
+						.media__title.media__title_mod VAST / VPAID Tag
+					.media__item
+						.media__avatar
+							i.icon.icon-advert-deal
+						.media__title.media__title_mod Deal ID
+					.media__item
+						.media__avatar
+							i.icon.icon-advert-rtb
+						.media__title.media__title_mod RTB
+				//end media
+	//end section
+
+	//begin section
+	section.section.advert
+		.container
+			.section__title.title Brand Safety
+			.section__subtitle.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+			//begin media
+			.media.media_4.media_banner
+				.media__item
+					.media__avatar
+						img.media__(src='img/content/advertise-banner-1.png' alt='image')
+				.media__item
+					.media__avatar
+						img.media__img(src='img/content/advertise-banner-2.png' alt='image')
+				.media__item
+					.media__avatar
+						img.media__img(src='img/content/advertise-banner-3.png' alt='image')
+				.media__item
+					.media__avatar
+						img.media__img(src='img/content/advertise-banner-4.png' alt='image')
+			//end media
+	//end section
+
+	//begin section
+	section.section.advert.advert_bg-3
+		.container
+			.advert__container
+				.section__title.title.title_white Get Started
+				.text-center
+					button.blue-btn.blue-btn_light Contact us <i class='icon'></i>
+	//end section
+
+block footer
+	footer.footer
+		//begin section
+		section.section
+			.container
+				.section__title.title Get in touch
+				form.section__form.form(action='#')
+					.form__field
+						input.form__input(type='text' placeholder='Full Name')
+					.form__field
+						input.form__input(type='text' placeholder='Email')
+					.form__field
+						input.form__input(type='text' placeholder='Company Name')
+					.form__field
+						.form__select-style
+							select.form__select(required)
+								option.form__option(value='' disabled selected) Company Type
+								option.form__option(value='type 1') Type 1
+								option.form__option(value='type 2') Type 2
+								option.form__option(value='type 3') Type 3
+					.form__field
+						textarea.form__area(placeholder='Message...')
+					.form__field.form__field_submit
+						button.form__submit.blue-btn(type='submit') Send <i class='icon'></i>
+		//end section
+		.footer__top
+			.footer__container.container
+				.footer__col
+					.footer__logo
+						img.footer__img(src='img/content/footer-logo.png' alt='logo')
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-geo
+						.foot-el__info
+							.foot-el__name Address
+							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-email
+						.foot-el__info
+							.foot-el__name Email
+							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
+		.footer__map-wrap
+			.footer__map#map
+			//begin map-in
+			.map-in
+				.map-in__inner
+					.map-in__title Follow Us
+					//begin soc
+					.soc
+						a.soc__link(href='#'): i.icon.icon-in
+					//end soc
+			//end map-in
+		.footer__bot
+			.container
+				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

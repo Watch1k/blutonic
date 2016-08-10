@@ -1,0 +1,150 @@
+extend includes/_layout
+
+block title
+	title Publisher
+
+block header
+	header.header
+		.header__container.container
+			a.header__logo(href='index.html')
+				img.header__logo-img(src='img/logo.png' srcset='img/logo@2x.png 2x' alt='logo')
+			button.header__nav-toggle
+				span.header__icon
+block content
+	//begin subheader
+	.subheader.subheader_publish
+		.subheader__title.container Publisher Solutions
+	//end subheader
+
+	//begin section
+	section.section.publish.publish_bg-2
+		.container
+			.publish__container
+				.section__title.title.title_medium.title_blue Video
+				.section__subtitle.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				.section__title.title.title_sm In-Stream
+				.section__subtitle.section__subtitle_mod.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				//begin info
+				.publish__info.info.info_right
+					.info__col
+						img.info__img(src='img/content/publish-in.png' srcset='img/content/publish-in@2x.png 2x' alt='image')
+					.info__col
+						ul.info__list.list
+							li.list__item Cross Screen Compatibility
+							li.list__item Holistic Yield Management
+							li.list__item Data Centric Reporting
+							li.list__item Simple Implementation
+				//end info
+				.section__title.title.title_sm Out-Stream
+				.section__subtitle.section__subtitle_mod.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				//begin info
+				.publish__info.info.info_right
+					.info__col
+						img.info__img(src='img/content/publish-out.png' srcset='img/content/publish-out@2x.png 2x' alt='image')
+					.info__col
+						ul.info__list.list
+							li.list__item Multiple Ad Formats
+							li.list__item Full Player Solutions
+							li.list__item Cross Screen and Responsive
+							li.list__item IAB and Custom Widgets
+				//end info
+	//end section
+
+	//begin section
+	section.section.publish
+		.container
+			.publish__container
+				.section__title.title.title_medium.title_blue Display
+				.section__subtitle.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				//begin info
+				.publish__info.info
+					.info__col
+						img.info__img(src='img/content/publish-display.png' srcset='img/content/publish-display@2x.png 2x' alt='image')
+					.info__col
+						ul.info__list.info__list_top.list
+							li.list__item Guaranteed Fill
+							li.list__item Multiple Ad Formats
+							li.list__item Cross Platform
+							li.list__item Dynamic Tags
+							li.list__item Data Centric Reporting
+							li.list__item Outstanding Support
+				//end info
+	//end section
+
+	//begin section
+	section.section.publish.publish_bg-3
+		.container
+			.publish__container
+				.section__title.title.title_medium.title_blue Native
+				.section__subtitle.subtitle With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.
+				//begin info
+				.publish__info.info.info_right
+					.info__col
+						img.info__img(src='img/content/publish-native.png' srcset='img/content/publish-native@2x.png 2x' alt='image')
+					.info__col
+						ul.info__list.info__list.list
+							li.list__item Simple Implementation
+							li.list__item Cross Screen and Responsive
+							li.list__item Customizable Widgets
+							li.list__item Data Centric Reporting
+				//end info
+	//end section
+
+block footer
+	footer.footer
+		//begin section
+		section.section
+			.container
+				.section__title.title Get in touch
+				form.section__form.form(action='#')
+					.form__field
+						input.form__input(type='text' placeholder='Full Name')
+					.form__field
+						input.form__input(type='text' placeholder='Email')
+					.form__field
+						input.form__input(type='text' placeholder='Company Name')
+					.form__field
+						.form__select-style
+							select.form__select(required)
+								option.form__option(value='' disabled selected) Company Type
+								option.form__option(value='type 1') Type 1
+								option.form__option(value='type 2') Type 2
+								option.form__option(value='type 3') Type 3
+					.form__field
+						textarea.form__area(placeholder='Message...')
+					.form__field.form__field_submit
+						button.form__submit.blue-btn(type='submit') Send <i class='icon'></i>
+		//end section
+		.footer__top
+			.footer__container.container
+				.footer__col
+					.footer__logo
+						img.footer__img(src='img/content/footer-logo.png' alt='logo')
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-geo
+						.foot-el__info
+							.foot-el__name Address
+							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-email
+						.foot-el__info
+							.foot-el__name Email
+							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
+		.footer__map-wrap
+			.footer__map#map
+			//begin map-in
+			.map-in
+				.map-in__inner
+					.map-in__title Follow Us
+					//begin soc
+					.soc
+						a.soc__link(href='#'): i.icon.icon-in
+					//end soc
+			//end map-in
+		.footer__bot
+			.container
+				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

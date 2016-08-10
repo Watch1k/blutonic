@@ -1,0 +1,192 @@
+extend includes/_layout
+
+block title
+	title Index
+
+block header
+	header.header.header_home
+		.header__container.container
+			a.header__logo(href='index.html')
+				img.header__logo-img(src='img/logo.png' srcset='img/logo@2x.png 2x' alt='logo')
+			button.header__nav-toggle
+				span.header__icon
+block content
+	//begin subheader
+	.subheader.subheader_home
+		.subheader__title.text-blue.container Dynamic Solutions
+			ul.subheader__list
+				li.subheader__list-item Video
+				li.subheader__list-item Display
+				li.subheader__list-item Native
+				li.subheader__list-item Rich Media
+	//end subheader
+
+	//begin section
+	section.section.section_media
+		//begin media
+		.media.media_home
+			.media__item
+				.media__ratio
+					.media__content
+						.media__avatar
+							img.media__img(src='img/content/advert-video.png' srcset='img/content/advert-video@2x.png 2x' alt='image')
+						.media__title Video
+				.media__hidden
+					.media__hidden-in
+						.media__hidden-title Dynamic solutions for engaging video experiences.
+						ul.media__list
+							li.media__list-item Cross-Device Delivery
+							li.media__list-item In-Stream & Out-Stream Solutions
+							li.media__list-item Adaptive Ad Formats
+							li.media__list-item Scale Without Compromise
+			.media__item
+				.media__ratio
+					.media__content
+						.media__avatar
+							img.media__img(src='img/content/advert-display.png' srcset='img/content/advert-display@2x.png 2x' alt='image')
+						.media__title Display
+				.media__hidden
+					.media__hidden-in
+						.media__hidden-title Dynamic solutions for engaging video experiences.
+						ul.media__list
+							li.media__list-item Cross-Device Delivery
+							li.media__list-item In-Stream & Out-Stream Solutions
+							li.media__list-item Adaptive Ad Formats
+							li.media__list-item Scale Without Compromise
+			.media__item
+				.media__ratio
+					.media__content
+						.media__avatar
+							img.media__img(src='img/content/advert-native.png' srcset='img/content/advert-native@2x.png 2x' alt='image')
+						.media__title Native
+				.media__hidden
+					.media__hidden-in
+						.media__hidden-title Dynamic solutions for engaging video experiences.
+						ul.media__list
+							li.media__list-item Cross-Device Delivery
+							li.media__list-item In-Stream & Out-Stream Solutions
+							li.media__list-item Adaptive Ad Formats
+							li.media__list-item Scale Without Compromise
+		//end media
+	//end section
+
+	//begin section
+	section.section.advert.advert_platform
+		.container
+			.advert__container
+				.section__title.title.title_white Platforms
+				//begin media
+				.media.media_platform
+					.media__item.is-active
+						.media__avatar
+							.media__icon
+								+i('mobile')
+						.media__title Mobile
+					.media__item
+						.media__avatar
+							.media__icon
+								+i('desktop')
+						.media__title Desktop
+					.media__item
+						.media__avatar
+							.media__icon
+								+i('tv')
+						.media__title TV
+				end media
+	//end section
+
+	//begin section
+	section.section.section_tabs
+		.container
+			.advert__container
+				.tabs-for
+					.tabs-for__item.is-active
+						.tabs-for__title Mobile
+						.tabs-for__text Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags. Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.
+					.tabs-for__item
+						.tabs-for__title Mobile
+						.tabs-for__text Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.
+					.tabs-for__item
+						.tabs-for__title Mobile
+						.tabs-for__text Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.
+	//end section
+
+	//begin section
+	section.section.section_tools
+		.container
+			.section__title.title.title_white Publisher Tools
+			//begin slider
+			.slider
+				.slider__item
+					.slider__title Global Support
+					.slider__text Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization. Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.
+					a.slider__blue-btn.blue-btn.blue-btn_light(href='#') Read more <i class="icon"></i>
+				.slider__item
+					.slider__title Global Support
+					.slider__text Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.
+					a.slider__blue-btn.blue-btn.blue-btn_light(href='#') Read more <i class="icon"></i>
+				.slider__item
+					.slider__title Global Support
+					.slider__text Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.
+					a.slider__blue-btn.blue-btn.blue-btn_light(href='#') Read more <i class="icon"></i>
+			//end slider
+	//end section
+
+block footer
+	footer.footer
+		//begin section
+		section.section
+			.container
+				.section__title.title Get in touch
+				form.section__form.form(action='#')
+					.form__field
+						input.form__input(type='text' placeholder='Full Name')
+					.form__field
+						input.form__input(type='text' placeholder='Email')
+					.form__field
+						input.form__input(type='text' placeholder='Company Name')
+					.form__field
+						.form__select-style
+							select.form__select(required)
+								option.form__option(value='' disabled selected) Company Type
+								option.form__option(value='type 1') Type 1
+								option.form__option(value='type 2') Type 2
+								option.form__option(value='type 3') Type 3
+					.form__field
+						textarea.form__area(placeholder='Message...')
+					.form__field.form__field_submit
+						button.form__submit.blue-btn(type='submit') Send <i class='icon'></i>
+		//end section
+		.footer__top
+			.footer__container.container
+				.footer__col
+					.footer__logo
+						img.footer__img(src='img/content/footer-logo.png' alt='logo')
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-geo
+						.foot-el__info
+							.foot-el__name Address
+							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-email
+						.foot-el__info
+							.foot-el__name Email
+							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
+		.footer__map-wrap
+			.footer__map#map
+			//begin map-in
+			.map-in
+				.map-in__inner
+					.map-in__title Follow Us
+					//begin soc
+					.soc
+						a.soc__link(href='#'): i.icon.icon-in
+					//end soc
+			//end map-in
+		.footer__bot
+			.container
+				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

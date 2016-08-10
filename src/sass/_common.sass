@@ -1,0 +1,1140 @@
+// fonts
++font('PFDinTextUniversal', 'PFDinTextUniversal')
++font('PFDinTextUniversal Thin', 'PFDinTextUniversal-Thin')
++font('PFDinTextUniversal Light', 'PFDinTextUniversal-Light')
++font('PFDinTextUniversal Medium', 'PFDinTextUniversal-Medium')
+$default-fonts: Arial, sans-serif
+=pf
+	font-family: 'PFDinTextUniversal', $default-fonts
+=pf-thin
+	font-family: 'PFDinTextUniversal Thin', $default-fonts
+=pf-light
+	font-family: 'PFDinTextUniversal Light', $default-fonts
+=pf-medium
+	font-family: 'PFDinTextUniversal Medium', $default-fonts
+
+// colors
+$gray: #f9f9f9
+$blue: #0da6df
+
+
+/* ===================================
+	 Main Styles
+	 =================================== */
+body
+	min-width: 320px
+	+pf-thin
+	font-size: 16px
+	color: #333
+	line-height: 1.2
+
+.wrapper
+	position: relative
+	overflow: hidden
+	margin: 0 auto
+	min-height: 100%
+	//padding-bottom: 40px
+
+.container
+	max-width: 1230px
+	margin: 0 auto
+	padding: 0 15px
+	transition: all 0.3s
+
+
+/* Helpers
+	----------------------------------- */
+button
+	background-color: transparent
+
+a:hover, a:focus
+	text-decoration: none
+
+a
+	color: inherit
+	text-decoration: none
+
+table
+	vertical-align: top
+
+img
+	vertical-align: top
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+.is-hidden
+	display: none
+
+.cfx
+	+pie-clearfix
+
+// *
+// 	+selection
+// 		color: #fff
+// 		background-color: $red
+
+.title
+	+pf-medium
+	font-size: 48px
+	color: #7c7b7b
+	text-transform: uppercase
+	text-align: center
+	&_white
+		color: #ffffff
+	&_blue
+		color: $blue
+	+r(479)
+		font-size: 36px
+	+r(374)
+		font-size: 30px
+	&_medium
+		font-size: 48px
+		+r(479)
+			font-size: 32px
+		+r(374)
+			font-size: 26px
+	&_sm
+		font-size: 32px
+		+r(479)
+			font-size: 26px
+		+r(374)
+			font-size: 22px
+
+.subtitle
+	max-width: 800px
+	margin-left: auto
+	margin-right: auto
+	font-size: 20px
+	color: #333333
+	line-height: 32px
+	letter-spacing: 0.02em
+	text-align: center
+	&_white
+		color: #ffffff
+	+r(374)
+		font-size: 18px
+		line-height: 26px
+		
+.blue-btn
+	display: inline-block
+	padding: 0 59px
+	height: 50px
+	font-size: 18px
+	color: $blue
+	line-height: 46px
+	text-transform: uppercase
+	border-radius: 3px
+	border: 2px solid $blue
+	transition: all 0.2s
+	&:hover
+		background-color: $blue
+		color: #ffffff
+		.icon
+			border-color: #ffffff
+	.icon
+		display: inline-block
+		margin-left: 4px
+		margin-right: -4px
+		position: relative
+		top: -2px
+		width: 9px
+		height: 9px
+		border-top: 2px solid $blue
+		border-right: 2px solid $blue
+		transform: rotate(45deg)
+		transition: all 0.2s
+	&_light
+		color: #ffffff
+		.icon
+			border-color: #ffffff
+
+
+/* ===================================
+	 Header
+	 =================================== */
+.header
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	right: 0
+	background-color: #ffffff
+	&__container
+		padding-top: 10px
+		padding-bottom: 10px
+		+pie-clearfix
+	&__logo
+		float: left
+		&-img
+			+r(479)
+				height: 40px
+	&__nav-toggle
+		display: none
+		float: right
+		position: relative
+		margin-top: 18px
+		width: 32px
+		height: 24px
+		+r(1023)
+			display: block
+		+r(479)
+			margin-top: 8px
+	&__icon
+		display: block
+		position: absolute
+		left: 0
+		top: 50%
+		margin-top: -2px
+		width: 100%
+		height: 4px
+		background-color: #26aee1
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			width: 100%
+			height: 4px
+			background-color: #26aee1
+		&:before
+			top: -10px
+		&:after
+			bottom: -10px
+	&_home
+		background-color: transparent
+
+
+/* ===================================
+	 Footer
+	 =================================== */
+.footer
+	//margin-top: -40px
+	//height: 40px
+	&__container
+		+pie-clearfix
+	&__top
+		padding-top: 35px
+		padding-bottom: 35px
+		border-top: 4px solid $blue
+		+pie-clearfix
+	&__logo
+		+r(767)
+			text-align: center
+	&__col
+		float: left
+		width: 30%
+		&:nth-child(2)
+			width: 40%
+			+r(767)
+				width: 50%
+			+r(539)
+				width: 100%
+		&:nth-child(3)
+			width: 30%
+			+r(767)
+				width: 50%
+			+r(539)
+				width: 100%
+		+r(767)
+			width: 100%
+	&__col:nth-child(2) &__foot-el
+		margin: 0 auto
+		+r(767)
+			margin: 30px 0 0 4px
+	&__col:nth-child(3) &__foot-el
+		float: right
+		+r(767)
+			float: none
+			margin: 30px auto 0
+		+r(539)
+			margin: 30px 0 0 0
+	&__bot
+		padding-top: 23px
+		padding-bottom: 23px
+		background-color: #333
+		text-align: center
+	&__copyright
+		font-size: 16px
+		color: #ffffff
+		line-height: 20px
+	&__map-wrap
+		position: relative
+	&__map
+		width: 100%
+		height: 560px
+		max-height: 60vh
+		
+.map-wrap
+	position: relative
+		
+.map
+	width: 100%
+	height: 640px
+	max-height: 65vh
+
+.map-in
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 10
+	background-color: rgba(255,255,255,.5)
+	&__inner
+		position: absolute
+		bottom: 30px
+		left: 0
+		right: 0
+	&__title
+		margin-bottom: 30px
+		+pf
+		font-size: 28px
+		color: #7c7b7b
+		text-transform: uppercase
+		text-align: center
+		
+.soc
+	text-align: center
+	&__link
+		display: inline-block
+		margin: 0 15px
+		.icon
+			display: block
+	
+.contact
+	font-size: 20px
+	line-height: 24px
+	+pie-clearfix
+	&__col
+		float: left
+		width: 37.5%
+		+pie-clearfix
+		& + &
+			width: 62.5%
+		+r(1023)
+			float: none
+			width: 100%
+			& + &
+				width: 100%
+				margin-top: 70px
+	&__title
+		text-align: left
+		margin-bottom: 50px
+		+r(1023)
+			text-align: center
+		+r(639)
+			margin-bottom: 40px
+	&__position
+		+pie-clearfix
+	&__row
+		& + &
+			margin-top: 20px
+		+r(1023)
+			display: inline-block
+			margin-bottom: 20px
+			margin-right: -4px
+			width: 50%
+			vertical-align: top
+			& + &
+				margin-top: 0
+		+r(767)
+			width: 100%
+			text-align: center
+	&__subtitle
+		+pf-medium
+	&__link
+		color: $blue
+	&__form
+		.form__area
+			height: 252px
+	&__logo
+		margin-top: 60px
+		+r(1023)
+			margin-top: 20px
+		+r(767)
+			text-align: center
+	
+.foot-el
+	display: table
+	height: 86px
+	width: auto
+	text-align: left
+	&__img
+		display: table-cell
+		padding-right: 10px
+		border-right: 2px solid #7c7b7b
+		vertical-align: middle
+		.icon
+			display: block
+	&__info
+		display: table-cell
+		padding-left: 10px
+		vertical-align: middle
+	&__name
+		font-size: 24px
+		color: $blue
+		text-transform: uppercase
+	&__text
+		margin-top: 10px
+		font-size: 16px
+		line-height: 24px
+		letter-spacing: 0.02em
+
+
+/* ===================================
+	 Main
+	 =================================== */
+.subheader
+	overflow: hidden
+	position: relative
+	height: 886px
+	max-height: 100vh
+	font-size: 72px
+	color: $gray
+	text-transform: uppercase
+	&_about
+		background: url('../img/bg/about-bg.jpg') center center no-repeat
+		background-size: cover
+	&_advert
+		background: url('../img/bg/advert-bg-4.jpg') center center no-repeat
+		background-size: cover
+	&_publish
+		background: url('../img/bg/publish-bg.jpg') center center no-repeat
+		background-size: cover
+	&_career
+		background: url('../img/bg/career-bg.jpg') center center no-repeat
+		background-size: cover
+	&_home
+		background: url('../img/bg/home-bg.jpg') center center no-repeat
+		background-size: cover
+	+r(767)
+		height: 380px
+	&__title
+		width: 100%
+		margin-top: 40px
+		padding: 0 100px
+		+pf-medium
+		text-align: center
+		+vcenter
+		+r(1199)
+			font-size: 60px
+			padding: 0 50px
+		+r(1023)
+			padding: 0 15px
+			font-size: 52px
+		+r(767)
+			font-size: 32px
+	&_home &__title
+		margin-top: 0
+	&__subtitle
+		display: block
+		margin-top: 44px
+		+pf
+		font-size: 26px
+		color: darken(#f9f9f9, 10)
+		line-height: 34px
+		text-transform: uppercase
+		+r(767)
+			font-size: 16px
+			line-height: 22px
+	&__list
+		margin-top: -10px
+		+r(1023)
+			margin-top: 0
+		&-item
+			position: relative
+			display: inline-block
+			margin-right: -4px
+			+pf-medium
+			font-size: 36px
+			color: #7c7b7b
+			+r(1023)
+				font-size: 30px
+			+r(767)
+				font-size: 18px
+			+r(479)
+				//+pf-light
+				font-size: 14px
+			& + &
+				margin-left: 30px
+				+r(479)
+					margin-left: 15px
+				&:before
+					content: ''
+					position: absolute
+					left: -24px
+					top: 3px
+					height: 80%
+					width: 4px
+					background-color: #7c7b7b
+					z-index: 1
+					+r(767)
+						top: 2px
+						left: -18px
+						width: 2px
+					+r(479)
+						left: -9px
+						height: 75%
+		
+.about
+	&__container
+		margin: 0 auto
+		max-width: 960px
+	&__col
+		float: left
+		width: 50%
+		padding-right: 22px
+		& + &
+			padding-right: 0
+			padding-left: 22px
+		+r(767)
+			padding-right: 0
+			width: 100%
+			& + &
+				margin-top: 70px
+				padding-left: 0
+	&__info
+		display: table
+		width: 100%
+		margin-bottom: 20px
+		+r(479)
+			height: 124px
+	&__avatar
+		overflow: hidden
+		display: table-cell
+		width: 161px
+		height: 161px
+		border-radius: 50%
+		border: 4px solid #ffffff
+		+r(479)
+			width: 124px
+			height: 124px
+	&__img
+		width: 100%
+		height: auto
+	&__desc
+		display: table-cell
+		padding-left: 21px
+		vertical-align: middle
+		+pf-medium
+		line-height: 32px
+		letter-spacing: 0.02em
+		+r(479)
+			padding-left: 11px
+	&__name
+		font-size: 28px
+		color: $blue
+		+r(479)
+			font-size: 24px
+			line-height: 28px
+	&__spec
+		font-size: 20px
+		color: #7c7b7b
+.section
+	padding-top: 50px
+	padding-bottom: 50px
+	+r(479)
+		padding-top: 40px
+		padding-bottom: 40px
+	&_gray
+		background-color: $gray
+	&__title
+		margin-bottom: 45px
+		+r(479)
+			margin-bottom: 40px
+		+r(374)
+			margin-bottom: 30px
+		&.title_medium
+			margin-bottom: 28px
+		&.title_sm
+			margin-bottom: 23px
+	&__subtitle
+		margin-bottom: 45px
+		&_mod
+			margin-bottom: 0
+	&__subtitle + &__title
+		margin-top: -12px
+	&__text
+		font-size: 20px
+		line-height: 32px
+		letter-spacing: 0.02em
+		& + &
+			margin-top: 12px
+		+r(479)
+			text-align: justify
+		+r(320)
+			font-size: 18px
+			line-height: 28px
+	&__title + &__text
+		margin-top: -15px
+		+r(767)
+			margin-top: 0
+	&__form
+		margin: 0 auto
+		max-width: 600px
+		+r(479)
+			margin-top: 0
+	&_media
+		padding-top: 0
+		padding-bottom: 0
+	&_tabs
+		padding-top: 0
+		padding-bottom: 0
+	&_tools
+		padding-top: 70px
+		padding-bottom: 95px
+		background: url('../img/bg/home-bg-2.jpg') center center no-repeat
+		background-size: cover
+	&_tools &__title
+		margin-bottom: 70px
+
+.advert
+	&_bg
+		background: url('../img/bg/advert-bg.jpg') center center no-repeat
+		background-size: cover
+	&_bg-2
+		background: url('../img/bg/advert-bg-2.jpg') center center no-repeat
+		background-size: cover
+	&_bg-3
+		padding-top: 80px
+		background: url('../img/bg/advert-bg-3.jpg') center center no-repeat
+		background-size: cover
+	&_platform
+		padding-top: 80px
+		background: url('../img/bg/home-bg-2.jpg') center center no-repeat
+		background-size: cover
+	&__container
+		max-width: 960px
+		margin: 0 auto
+		
+.media
+	padding: 0 40px
+	+r(1023)
+		padding: 0
+	&__item
+		display: inline-block
+		width: 33.33%
+		margin-right: -4px
+		text-align: center
+		vertical-align: bottom
+	&__img
+		+r(767)
+			width: 50%
+			height: auto
+	&_white &__title
+		color: #ffffff
+	&_4
+		padding: 0
+		+r(639)
+			margin-top: -50px
+	&_4 &__item
+		width: 25%
+		+r(767)
+			margin-top: 0
+		+r(639)
+			margin-top: 50px
+			width: 50%
+	&_4 &__avatar
+		+r(639)
+			padding: 0 15%
+	&_4 &__title
+		+r(374)
+			font-size: 16px
+	&_banner &__item
+		padding: 0 5%
+		vertical-align: middle
+	&_banner &__item &__img
+		width: 100%
+		height: auto
+	&__title
+		margin-top: 29px
+		+pf-light
+		font-size: 32px
+		color: $blue
+		text-transform: uppercase
+		+r(767)
+			margin-top: 19px
+			font-size: 24px
+		+r(374)
+			font-size: 16px
+		&_mod
+			+pf-thin
+			font-size: 24px
+			text-transform: inherit
+			+r(1023)
+				font-size: 20px
+			+r(767)
+				font-size: 18px
+	.icon
+		display: inline-block
+		margin-right: -4px
+	&_home &__ratio
+		+r(1439)
+			+ratio-in
+		+r(1023)
+			position: relative
+	&_home &__content
+		+r(1439)
+			+vcenter
+		+r(1023)
+			position: relative
+			left: auto
+			top: auto
+			transform: none
+	&_home
+		padding: 0
+	&_home &__item
+		overflow: hidden
+		position: relative
+		padding-top: 60px
+		padding-bottom: 60px
+		+r(1439)
+			padding: 0
+			+ratio(1,1)
+		+r(1023)
+			width: 100%
+			float: none
+			&:before
+				content: none
+				display: none
+	&_home &__title
+		+r(1023)
+			font-size: 36px
+	&_home &__img
+		+r(1023)
+			width: auto
+			height: 100px
+	&_home &__content
+		+r(1023)
+			padding-top: 40px
+			padding-bottom: 40px
+	&__hidden
+		opacity: 0
+		visibility: hidden
+		pointer-events: auto
+		position: absolute
+		z-index: 1
+		left: 0
+		top: 100%
+		right: 0
+		bottom: 0
+		+pf-light
+		line-height: 1.2
+		color: #ffffff
+		text-align: left
+		background-color: #333333
+		+vertical
+		font-size: 0
+		transition: all 0.4s
+		+r(1023)
+			pointer-events: auto
+			position: relative
+			visibility: visible
+			opacity: 1
+			padding-top: 40px
+			padding-bottom: 40px
+			text-align: center
+			background-color: #f9f9f9
+			color: #333333
+		&-in
+			font-size: 24px
+			display: inline-block
+			vertical-align: middle
+		&-title
+			padding: 0 20px
+			white-space: initial
+	&__item:hover &__hidden
+		top: 0
+		opacity: 1
+		visibility: visible
+		pointer-events: auto
+	&__list
+		margin-top: 50px
+		padding-left: 45px
+		padding-right: 10px
+		list-style: disc
+		font-size: 18px
+		line-height: 32px
+		white-space: initial
+		text-align: left
+		box-sizing: border-box
+		+r(1023)
+			display: inline-block
+			margin-left: auto
+			margin-right: auto
+	&_platform
+		margin-top: 95px
+		margin-bottom: 35px
+		padding-left: 100px
+		padding-right: 100px
+		+r(767)
+			margin-top: 75px
+			padding-left: 0
+			padding-right: 0
+		+r(479)
+			margin-top: 50px
+	&_platform &__img
+		max-width: 35%
+	&_platform &__title
+		font-size: 20px
+		+r(639)
+			font-size: 18px
+		+r(479)
+			font-size: 16px
+	&_platform &__item
+		cursor: pointer
+	&_platform &__item:hover &__title,
+	&_platform &__item.is-active &__title
+		color: #ffffff
+	&_platform &__item
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			bottom: -130px
+			left: 50%
+			margin-left: -24px
+			+arr(48,22,#ffffff,t)
+			transition: all 0.4s
+	&_platform &__item.is-active
+		&:before
+			bottom: -105px
+	&_platform &__icon
+		color: $blue
+		.icon
+			+r(639)
+				font-size: 64px
+			+r(479)
+				font-size: 48px
+	&_platform &__item:hover &__icon,
+	&_platform &__item.is-active &__icon
+		color: #ffffff
+		
+.publish
+	&_bg-2
+		background: url('../img/bg/publish-bg-2.jpg') center center no-repeat
+		background-size: cover
+	&_bg-3
+		background: url('../img/bg/publish-bg-3.jpg') center center no-repeat
+		background-size: cover
+	&__container
+		max-width: 800px
+		margin: 0 auto
+	&__info
+		margin-top: 36px
+		margin-bottom: 60px
+		&:last-child
+			margin-bottom: 0
+		
+.info
+	+pie-clearfix
+	&__col
+		float: left
+		width: 50%
+		padding-right: 10%
+		& + &
+			padding-right: 0
+			padding-left: 10%
+		+r(479)
+			float: none
+			width: 100%
+			text-align: center
+			padding: 0
+	&_right &__col
+		float: right
+		padding-left: 10%
+		padding-right: 0
+		+r(479)
+			float: none
+			padding: 0
+	&_right &__col + &__col
+		padding-left: 0
+		padding-right: 10%
+		+r(479)
+			padding: 0
+	&__img
+		width: 100%
+		height: auto
+		+r(479)
+			width: 50%
+			height: auto
+			margin-bottom: 30px
+	&__list
+		+r(479)
+			display: inline-block
+			text-align: left
+		&_top
+			margin-top: -25px
+			+r(479)
+				margin-top: 0
+		
+.list
+	font-size: 24px
+	line-height: 1
+	letter-spacing: 0.02em
+	white-space: nowrap
+	+r(767)
+		font-size: 20px
+	&__item
+		position: relative
+		padding-top: 14px
+		padding-bottom: 14px
+		padding-left: 18px
+		+r(767)
+			padding-top: 8px
+			padding-bottom: 8px
+		&:before
+			content: ''
+			position: absolute
+			margin-top: -4px
+			top: 50%
+			left: 0
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background-color: $blue
+		
+.career
+	&__container
+		margin: 0 auto
+		max-width: 1080px
+	&__center
+		text-align: center
+	&__list
+		display: inline-block
+		margin: 0 auto
+		text-align: left
+	&__accordion
+		margin-top: 48px
+		
+.accordion
+	&__title
+		position: relative
+		+pf-medium
+		font-size: 36px
+		color: #ffffff
+		line-height: 144px
+		text-align: center
+		text-transform: uppercase
+		background-color: $blue
+		border-radius: 16px
+		border: 1px solid transparent
+		transition: all 0.4s
+		& + &
+			margin-top: 20px
+		&-in
+			cursor: pointer
+		.icon-title
+			position: absolute
+			top: 60px
+			right: 60px
+			z-index: 1
+			width: 14px
+			height: 14px
+			border-right: 3px solid #ffffff
+			border-bottom: 3px solid #ffffff
+			transform: rotate(45deg)
+			transition: all 0.4s
+		&.is-active
+			background-color: #ffffff
+			color: $blue
+			border-color: #dddddd
+			.icon-title
+				border-color: $blue
+				transform: rotate(225deg)
+	&__inner
+		display: none
+		padding-left: 60px
+		padding-right: 60px
+		+pf-thin
+		font-size: 20px
+		color: $blue
+		line-height: 32px
+		text-align: left
+		text-transform: none
+		transition: color 0.4s
+		p
+			margin-bottom: 32px
+	&__title.is-active &__inner
+		color: #333333
+		
+.doc
+	&__list
+		margin-bottom: 32px
+		&-item
+			position: relative
+			padding-left: 20px
+			&:before
+				content: ''
+				position: absolute
+				z-index: 1
+				left: 4px
+				top: 12px
+				width: 8px
+				height: 8px
+				background-color: $blue
+				border-radius: 8px
+	&__title
+		+pf
+		font-size: 22px
+	&__center
+		margin-bottom: 32px
+		text-align: center
+		
+.tabs-for
+	overflow: hidden
+	transition: height 0.3s
+	&__item
+		padding-top: 50px
+		padding-bottom: 50px
+	&__title
+		margin-bottom: 35px
+		+pf
+		font-size: 32px
+		color: #7c7b7b
+		text-transform: uppercase
+		text-align: center
+	&__text
+		max-width: 760px
+		margin-left: auto
+		margin-right: auto
+		+pf-thin
+		font-size: 20px
+		line-height: 32px
+		text-align: center
+		
+.slider
+	position: relative
+	text-align: center
+	&__title
+		margin-bottom: 25px
+		+pf
+		font-size: 36px
+		color: $blue
+		text-transform: uppercase
+		+r(767)
+			font-size: 30px
+		+r(479)
+			font-size: 26px
+	&__text
+		margin-left: auto
+		margin-right: auto
+		max-width: 760px
+		font-size: 20px
+		color: #ffffff
+		line-height: 32px
+		margin-bottom: 30px
+		+r(479)
+			font-size: 18px
+			line-height: 26px
+	&__blue-btn
+		padding-left: 30px
+		padding-right: 30px
+		height: 44px
+		line-height: 40px
+	.owl-controls
+		position: absolute
+		z-index: 1
+		bottom: -70px
+		left: 0
+		right: 0
+	.owl-dots
+		text-align: center
+	.owl-dot
+		display: inline-block
+		padding: 8px
+		span
+			display: block
+			width: 12px
+			height: 12px
+			border-radius: 50%
+			opacity: 0.5
+			background-color: #7c7b7b
+			transition: all 0.3s
+			box-sizing: content-box
+		&.active
+			span
+				background-color: $blue
+				opacity: 1
+
+.form
+	color: #7c7b7b
+	&__field
+		+pie-clearfix
+		& + &
+			margin-top: 10px
+		&_submit
+			margin-top: 30px
+			text-align: center
+	&__field_half &__input
+		float: left
+		width: calc(50% - 5px)
+		+r(639)
+			float: none
+			width: 100%
+	&__field_half &__input:nth-child(2)
+		margin-left: 10px
+		+r(639)
+			margin-top: 10px
+			margin-left: 0
+	&__input
+		padding: 0 18px
+		width: 100%
+		height: 50px
+		font-size: 20px
+		line-height: 48px
+		border-radius: 3px
+		border: 1px solid #7c7b7b
+		+placeholder-color(#a3a2a2)
+	&__select-style
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			right: 20px
+			top: 18px
+			z-index: 1
+			width: 8px
+			height: 8px
+			border-right: 2px solid #7c7b7b
+			border-bottom: 2px solid #7c7b7b
+			transform: rotate(45deg)
+	&__select
+		appearance: none
+		padding: 0 38px 0 18px
+		width: 100%
+		height: 50px
+		font-size: 20px
+		line-height: 48px
+		border-radius: 3px
+		border: 1px solid #7c7b7b
+		background-color: transparent
+		&:required:invalid
+			color: #a3a2a2
+	&__area
+		padding: 12px 18px
+		font-size: 20px
+		line-height: 26px
+		width: 100%
+		height: 132px
+		border-radius: 3px
+		border: 1px solid #7c7b7b
+		+placeholder-color(#a3a2a2)
+		
+
+/* ===================================
+	 Other Styles
+	 =================================== */
+.text-blue
+	color: $blue
+	
+.text-center
+	text-align: center

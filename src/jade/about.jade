@@ -1,0 +1,120 @@
+extend includes/_layout
+
+block title
+	title About
+
+block header
+	header.header
+		.header__container.container
+			a.header__logo(href='index.html')
+				img.header__logo-img(src='img/logo.png' srcset='img/logo@2x.png 2x' alt='logo')
+			button.header__nav-toggle
+				span.header__icon
+block content
+	//begin subheader
+	.subheader.subheader_about
+		.subheader__title.container Continuously Innovating and Improving
+	//end subheader
+
+	//begin section
+	section.section.section_gray.about
+		.container
+			.about__container
+				.section__title.title Leadership
+				.cfx
+					.about__col
+						.about__item
+							.about__info
+								.about__avatar
+									img.about__img(src='img/content/about-1.jpg' alt='image')
+								.about__desc
+									.about__name Mirza Ibrahimovic
+									.about__spec CEO
+							p.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae nisi orci. Aenean efficitur euismod faucibus. Suspendisse molestie eleifend tortor, et aliquam tellus condimentum a. Quisque tincidunt, urna at tristique mollis, nunc magna eleifend mauris, non pulvinar ex nisi ut augue. Maecenas vitae sapien dolor. Phasellus accumsan, lorem id feugiat laoreet, ante massa vulputate nisi, quis interdum lacus velit id massa.
+					.about__col
+						.about__item
+							.about__info
+								.about__avatar
+									img.about__img(src='img/content/about-2.jpg' alt='image')
+								.about__desc
+									.about__name Adam Grossman
+									.about__spec President
+							p.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae nisi orci. Aenean efficitur euismod faucibus. Suspendisse molestie eleifend tortor, et aliquam tellus condimentum a. Quisque tincidunt, urna at tristique mollis, nunc magna eleifend mauris, non pulvinar ex nisi ut augue. Maecenas vitae sapien dolor. Phasellus accumsan, lorem id feugiat laoreet, ante massa vulputate nisi, quis interdum lacus velit id massa.
+	//end section
+
+	//begin section
+	section.section
+		.container
+			.about__container
+				.section__title.title The Idea
+				p.section__text Founded by <span class='text-blue'>Adam Grossman</span> and <span class='text-blue'>Mirza Ibrahimovic</span> in 2010, bluTonic manages a portfolio composed of clients in all verticals, many of which are Fortune 500 companies. Our main focus is data aggregation and management, targeting intelligence and consumer retention. With decades of online experience, bluTonic is a digital media company that endlessly focuses on technological innovations and revenue enhancement systems. Connecting consumers with brands.
+				p.section__text We are a diverse group of dedicated and talented individuals who value integrity and good business ethics. We are supportive and readily available to assist our clients at all hours. The vision of this organization is to continuously innovate and improve the field of internet advertising by focusing on research and development of tools used to optimize consumer targeting.
+	//end section
+
+	//begin section
+	section.section.section_gray.about
+		.container
+			.about__container
+				.section__title.title Our Team
+				p.section__text We believe in creating an organization that values and encourages creativity and individual ownership of ideas. Our team focuses on both the bottom-line results and its cultural foundation to help brands achieve their online marketing goals and objectives through strategic planning and execution. We learn and adapt in real-time to exceed expectations and deliver results. Hundreds of the world’s leading brands rely on bluTonic to power their display, video and mobile initiatives.
+				p.section__text We require all employees to thrive in a fast paced, high-performance environment. Enthusiasm, quick reaction times, flexibility and timely problem solving are just a few characteristics that describe our staff. We believe in clear and direct communication. Our goal is to shape business decisions, generate customer loyalty and create an inspiring culture for all team members.
+	//end section
+
+block footer
+	footer.footer
+		//begin section
+		section.section
+			.container
+				.section__title.title Get in touch
+				form.section__form.form(action='#')
+					.form__field
+						input.form__input(type='text' placeholder='Full Name')
+					.form__field
+						input.form__input(type='text' placeholder='Email')
+					.form__field
+						input.form__input(type='text' placeholder='Company Name')
+					.form__field
+						.form__select-style
+							select.form__select(required)
+								option.form__option(value='' disabled selected) Company Type
+								option.form__option(value='type 1') Type 1
+								option.form__option(value='type 2') Type 2
+								option.form__option(value='type 3') Type 3
+					.form__field
+						textarea.form__area(placeholder='Message...')
+					.form__field.form__field_submit
+						button.form__submit.blue-btn(type='submit') Send <i class='icon'></i>
+		//end section
+		.footer__top
+			.footer__container.container
+				.footer__col
+					.footer__logo
+						img.footer__img(src='img/content/footer-logo.png' alt='logo')
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-geo
+						.foot-el__info
+							.foot-el__name Address
+							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
+				.footer__col
+					.footer__foot-el.foot-el
+						.foot-el__img
+							i.icon.icon-email
+						.foot-el__info
+							.foot-el__name Email
+							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
+		.footer__map-wrap
+			.footer__map#map
+			//begin map-in
+			.map-in
+				.map-in__inner
+					.map-in__title Follow Us
+					//begin soc
+					.soc
+						a.soc__link(href='#'): i.icon.icon-in
+					//end soc
+			//end map-in
+		.footer__bot
+			.container
+				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

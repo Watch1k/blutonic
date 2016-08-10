@@ -1,0 +1,44 @@
+include _mixins
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		block title
+			title Template
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="format-detection" content="telephone=no")
+		<!-- theme color for android 5.0 -->
+		meta(name="theme-color" content="#fff")
+		<!-- <meta name="viewport" content="width=1200"> -->
+		<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+		block css
+			link(rel="stylesheet" media="all" href="css/screen.css")
+		<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	body
+		.wrapper
+			block header
+			main.main
+				block content
+		block footer
+		block js
+			script.
+				function initMap() {
+					var myLatLng = {lat: 34.0627069, lng: -118.3539114};
+					var mapProp = {
+						center: myLatLng,
+						zoom: 17,
+						scrollwheel: false,
+						draggable: true,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					var map = new google.maps.Map(document.getElementById("map"), mapProp);
+					var marker = new google.maps.Marker({
+						position: myLatLng,
+						map: map,
+						title: 'bluTonic, Inc.'
+					});
+				}
+				google.maps.event.addDomListener(window, 'load', initMap);
+			script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCvPiVe7YAjq0L-k9SvcDojzZrgBH46vds&callback=initMap" async defer)
+			script(src="js/app.js")

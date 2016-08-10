@@ -1,0 +1,98 @@
+$icons: (0:0)
+$icons: map-merge($icons,(advert-deal: (X: -120px, Y:0px, W: 44px, H: 44px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(advert-rtb: (X: -52px, Y:-68px, W: 47px, H: 46px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(advert-service: (X: -68px, Y:0px, W: 48px, H: 48px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(advert-tag: (X: 0px, Y:-68px, W: 48px, H: 48px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arrow-right: (X: -144px, Y:-48px, W: 8px, H: 13px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(email: (X: -120px, Y:-76px, W: 24px, H: 18px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(geo: (X: -120px, Y:-48px, W: 20px, H: 24px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(in: (X: 0px, Y:0px, W: 64px, H: 64px, TW: 164px, TH: 116px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2
+@mixin sprite-position-retina($iconName)
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)
+@mixin spr($i)
+	+sprite-position-retina($i)
+
+.icon-advert-deal
+	width: 44px
+	height: 44px
+	background-image: url('../img/icons.png')
+	background-position: -120px 0px
+	background-size: 164px 116px
+.icon-advert-rtb
+	width: 47px
+	height: 46px
+	background-image: url('../img/icons.png')
+	background-position: -52px -68px
+	background-size: 164px 116px
+.icon-advert-service
+	width: 48px
+	height: 48px
+	background-image: url('../img/icons.png')
+	background-position: -68px 0px
+	background-size: 164px 116px
+.icon-advert-tag
+	width: 48px
+	height: 48px
+	background-image: url('../img/icons.png')
+	background-position: 0px -68px
+	background-size: 164px 116px
+.icon-arrow-right
+	width: 8px
+	height: 13px
+	background-image: url('../img/icons.png')
+	background-position: -144px -48px
+	background-size: 164px 116px
+.icon-email
+	width: 24px
+	height: 18px
+	background-image: url('../img/icons.png')
+	background-position: -120px -76px
+	background-size: 164px 116px
+.icon-geo
+	width: 20px
+	height: 24px
+	background-image: url('../img/icons.png')
+	background-position: -120px -48px
+	background-size: 164px 116px
+.icon-in
+	width: 64px
+	height: 64px
+	background-image: url('../img/icons.png')
+	background-position: 0px 0px
+	background-size: 164px 116px
