@@ -216,7 +216,7 @@ gulp.task('js', function() {
 gulp.task('copy', function() {
     gulp.src('src/*.php')
         .pipe(gulp.dest('build/'));
-    gulp.src(['src/img/*/*', '!src/img/icons/*', '!src/img/svg/*'])
+    gulp.src(['src/img/**/*', '!src/img/icons/', '!src/img/icons/**', '!src/img/svg/', '!src/img/svg/**'])
         .pipe(gulp.dest('build/img/'));
     gulp.src('src/fonts/*.*')
         .pipe(gulp.dest('build/css/fonts/'));
