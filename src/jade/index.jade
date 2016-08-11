@@ -28,8 +28,8 @@ block content
 			.media__item
 				.media__ratio
 					.media__content
-						.media__avatar
-							img.media__img(src='img/content/advert-video.png' srcset='img/content/advert-video@2x.png 2x' alt='image')
+						.media__icon
+							+i('video')
 						.media__title Video
 				.media__hidden
 					.media__hidden-in
@@ -42,8 +42,8 @@ block content
 			.media__item
 				.media__ratio
 					.media__content
-						.media__avatar
-							img.media__img(src='img/content/advert-display.png' srcset='img/content/advert-display@2x.png 2x' alt='image')
+						.media__icon
+							+i('display')
 						.media__title Display
 				.media__hidden
 					.media__hidden-in
@@ -56,8 +56,8 @@ block content
 			.media__item
 				.media__ratio
 					.media__content
-						.media__avatar
-							img.media__img(src='img/content/advert-native.png' srcset='img/content/advert-native@2x.png 2x' alt='image')
+						.media__icon
+							+i('native')
 						.media__title Native
 				.media__hidden
 					.media__hidden-in
@@ -77,17 +77,17 @@ block content
 				.section__title.title.title_white Platforms
 				//begin media
 				.media.media_platform
-					.media__item.is-active
+					.media__item.is-active.js-tabs-btn
 						.media__avatar
 							.media__icon
 								+i('mobile')
 						.media__title Mobile
-					.media__item
+					.media__item.js-tabs-btn
 						.media__avatar
 							.media__icon
 								+i('desktop')
 						.media__title Desktop
-					.media__item
+					.media__item.js-tabs-btn
 						.media__avatar
 							.media__icon
 								+i('tv')
@@ -99,37 +99,39 @@ block content
 	section.section.section_tabs
 		.container
 			.advert__container
-				.tabs-for
-					.tabs-for__item.is-active
-						.tabs-for__title Mobile
-						.tabs-for__text Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags. Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.
-					.tabs-for__item
+				.tabs-for.js-tabs
+					.tabs-for__item.js-tabs-item
 						.tabs-for__title Mobile
 						.tabs-for__text Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.
-					.tabs-for__item
+					.tabs-for__item.js-tabs-item
+						.tabs-for__title Mobile
+						.tabs-for__text Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags. Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.
+					.tabs-for__item.js-tabs-item
 						.tabs-for__title Mobile
 						.tabs-for__text Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.
 	//end section
 
 	//begin section
 	section.section.section_tools
-		.container
-			.section__title.title.title_white Publisher Tools
-			//begin slider
-			.slider
-				.slider__item
+		.section__title.title.title_white Publisher Tools
+		//begin slider
+		.slider.js-slider
+			.slider__item
+				.slider__container.container
 					.slider__title Global Support
 					.slider__text Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization. Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.
 					a.slider__blue-btn.blue-btn.blue-btn_light(href='#') Read more <i class="icon"></i>
-				.slider__item
+			.slider__item
+				.slider__container.container
 					.slider__title Global Support
 					.slider__text Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.
 					a.slider__blue-btn.blue-btn.blue-btn_light(href='#') Read more <i class="icon"></i>
-				.slider__item
+			.slider__item
+				.slider__container.container
 					.slider__title Global Support
 					.slider__text Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.
 					a.slider__blue-btn.blue-btn.blue-btn_light(href='#') Read more <i class="icon"></i>
-			//end slider
+		//end slider
 	//end section
 
 block footer
@@ -164,29 +166,26 @@ block footer
 						img.footer__img(src='img/content/footer-logo.png' alt='logo')
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-geo
+						.foot-el__icon
+							+i('geo')
 						.foot-el__info
 							.foot-el__name Address
 							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-email
+						.foot-el__icon
+							+i('email')
 						.foot-el__info
 							.foot-el__name Email
 							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
-		.footer__map-wrap
-			.footer__map#map
-			//begin map-in
-			.map-in
-				.map-in__inner
-					.map-in__title Follow Us
-					//begin soc
-					.soc
-						a.soc__link(href='#'): i.icon.icon-in
-					//end soc
-			//end map-in
+		.footer__map
+			.footer__map-container#map
+			.footer__map-social
+				.footer__map-title Follow Us
+				//begin soc
+				.soc
+					a.soc__link.soc__link_in(href='#'): +i('in')
+				//end soc
 		.footer__bot
 			.container
 				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

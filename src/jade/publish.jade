@@ -27,7 +27,8 @@ block content
 				//begin info
 				.publish__info.info.info_right
 					.info__col
-						img.info__img(src='img/content/publish-in.png' srcset='img/content/publish-in@2x.png 2x' alt='image')
+						.info__icon
+							+i('publish-1')
 					.info__col
 						ul.info__list.list
 							li.list__item Cross Screen Compatibility
@@ -40,7 +41,8 @@ block content
 				//begin info
 				.publish__info.info.info_right
 					.info__col
-						img.info__img(src='img/content/publish-out.png' srcset='img/content/publish-out@2x.png 2x' alt='image')
+						.info__icon
+							+i('publish-2')
 					.info__col
 						ul.info__list.list
 							li.list__item Multiple Ad Formats
@@ -59,7 +61,8 @@ block content
 				//begin info
 				.publish__info.info
 					.info__col
-						img.info__img(src='img/content/publish-display.png' srcset='img/content/publish-display@2x.png 2x' alt='image')
+						.info__icon
+							+i('publish-3')
 					.info__col
 						ul.info__list.info__list_top.list
 							li.list__item Guaranteed Fill
@@ -80,7 +83,8 @@ block content
 				//begin info
 				.publish__info.info.info_right
 					.info__col
-						img.info__img(src='img/content/publish-native.png' srcset='img/content/publish-native@2x.png 2x' alt='image')
+						.info__icon
+							+i('publish-4')
 					.info__col
 						ul.info__list.info__list.list
 							li.list__item Simple Implementation
@@ -122,29 +126,26 @@ block footer
 						img.footer__img(src='img/content/footer-logo.png' alt='logo')
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-geo
+						.foot-el__icon
+							+i('geo')
 						.foot-el__info
 							.foot-el__name Address
 							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-email
+						.foot-el__icon
+							+i('email')
 						.foot-el__info
 							.foot-el__name Email
 							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
-		.footer__map-wrap
-			.footer__map#map
-			//begin map-in
-			.map-in
-				.map-in__inner
-					.map-in__title Follow Us
-					//begin soc
-					.soc
-						a.soc__link(href='#'): i.icon.icon-in
-					//end soc
-			//end map-in
+		.footer__map
+			.footer__map-container#map
+			.footer__map-social
+				.footer__map-title Follow Us
+				//begin soc
+				.soc
+					a.soc__link.soc__link_in(href='#'): +i('in')
+				//end soc
 		.footer__bot
 			.container
 				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

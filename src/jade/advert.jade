@@ -26,16 +26,16 @@ block content
 				//begin media
 				.media
 					.media__item
-						.media__avatar
-							img.media__img(src='img/content/advert-desktop.png' srcset='img/content/advert-desktop@2x.png 2x' alt='image')
+						.media__icon
+							+i('desktop-lg')
 						.media__title Desktop
 					.media__item
-						.media__avatar
-							img.media__img(src='img/content/advert-mobile.png' srcset='img/content/advert-mobile@2x.png 2x' alt='image')
+						.media__icon
+							+i('mobile-lg')
 						.media__title Mobile
 					.media__item
-						.media__avatar
-							img.media__img(src='img/content/advert-tv.png' srcset='img/content/advert-tv@2x.png 2x' alt='image')
+						.media__icon
+							+i('tv-lg')
 						.media__title TV
 				//end media
 	//end section
@@ -49,16 +49,16 @@ block content
 				//begin media
 				.media
 					.media__item
-						.media__avatar
-							img.media__img(src='img/content/advert-video.png' srcset='img/content/advert-video@2x.png 2x' alt='image')
+						.media__icon
+							+i('video')
 						.media__title Video
 					.media__item
-						.media__avatar
-							img.media__img(src='img/content/advert-display.png' srcset='img/content/advert-display@2x.png 2x' alt='image')
+						.media__icon
+							+i('display')
 						.media__title Display
 					.media__item
-						.media__avatar
-							img.media__img(src='img/content/advert-native.png' srcset='img/content/advert-native@2x.png 2x' alt='image')
+						.media__icon
+							+i('native')
 						.media__title Native
 				//end media
 	//end section
@@ -72,20 +72,20 @@ block content
 				//begin media
 				.media.media_4.media_white
 					.media__item
-						.media__avatar
-							i.icon.icon-advert-service
+						.media__icon
+							+i('service')
 						.media__title.media__title_mod Managed Services
 					.media__item
-						.media__avatar
-							i.icon.icon-advert-tag
+						.media__icon
+							+i('tag')
 						.media__title.media__title_mod VAST / VPAID Tag
 					.media__item
-						.media__avatar
-							i.icon.icon-advert-deal
+						.media__icon
+							+i('deal')
 						.media__title.media__title_mod Deal ID
 					.media__item
-						.media__avatar
-							i.icon.icon-advert-rtb
+						.media__icon
+							+i('rtb')
 						.media__title.media__title_mod RTB
 				//end media
 	//end section
@@ -153,29 +153,26 @@ block footer
 						img.footer__img(src='img/content/footer-logo.png' alt='logo')
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-geo
+						.foot-el__icon
+							+i('geo')
 						.foot-el__info
 							.foot-el__name Address
 							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-email
+						.foot-el__icon
+							+i('email')
 						.foot-el__info
 							.foot-el__name Email
 							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
-		.footer__map-wrap
-			.footer__map#map
-			//begin map-in
-			.map-in
-				.map-in__inner
-					.map-in__title Follow Us
-					//begin soc
-					.soc
-						a.soc__link(href='#'): i.icon.icon-in
-					//end soc
-			//end map-in
+		.footer__map
+			.footer__map-container#map
+			.footer__map-social
+				.footer__map-title Follow Us
+				//begin soc
+				.soc
+					a.soc__link.soc__link_in(href='#'): +i('in')
+				//end soc
 		.footer__bot
 			.container
 				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

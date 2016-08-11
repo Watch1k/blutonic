@@ -51,8 +51,8 @@
             <div class="career__accordion accordion">
               <!-- begin accordion item-->
               <div class="accordion__title">
-                <div class="accordion__title-in">Ad Operations <i class="icon-title"></i></div>
-                <div class="accordion__inner doc">
+                <div class="accordion__title-in js-accordion-title">Ad Operations <i class="icon-title"></i></div>
+                <div class="accordion__inner doc js-accordion-inner">
                   <p>An Account Manager's job is to facilitate and oversee the success and monetization of media inventory on a daily basis. This includes, but it not limited to the following:</p>
                   <p class="doc__title">Campaign Management</p>
                   <ul class="doc__list">
@@ -80,8 +80,8 @@
               </div>
               <!-- begin accordion item-->
               <div class="accordion__title">
-                <div class="accordion__title-in">Publisher Development Manager <i class="icon-title"></i></div>
-                <div class="accordion__inner doc">
+                <div class="accordion__title-in js-accordion-title">Publisher Development Manager <i class="icon-title"></i></div>
+                <div class="accordion__inner doc js-accordion-inner">
                   <p>An Account Manager's job is to facilitate and oversee the success and monetization of media inventory on a daily basis. This includes, but it not limited to the following:</p>
                   <p class="doc__title">Campaign Management</p>
                   <ul class="doc__list">
@@ -109,8 +109,8 @@
               </div>
               <!-- begin accordion item-->
               <div class="accordion__title">
-                <div class="accordion__title-in">Account Manager <i class="icon-title"></i></div>
-                <div class="accordion__inner doc">
+                <div class="accordion__title-in js-accordion-title">Account Manager <i class="icon-title"></i></div>
+                <div class="accordion__inner doc js-accordion-inner">
                   <p>An Account Manager's job is to facilitate and oversee the success and monetization of media inventory on a daily basis. This includes, but it not limited to the following:</p>
                   <p class="doc__title">Campaign Management</p>
                   <ul class="doc__list">
@@ -151,7 +151,7 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-geo"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-geo"><use xlink:href="img/sprite.svg#icon-geo"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Address</div>
               <div class="foot-el__text">bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036</div>
@@ -160,25 +160,21 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-email"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-email"><use xlink:href="img/sprite.svg#icon-email"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Email</div><a href="mailto:info@blutonic.com" class="foot-el__text">info@blutonic.com</a></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer__map-wrap">
-      <div id="map" class="footer__map"></div>
-      <!--begin map-in-->
-      <div class="map-in">
-        <div class="map-in__inner">
-          <div class="map-in__title">Follow Us</div>
-          <!--begin soc-->
-          <div class="soc"><a href="#" class="soc__link"><i class="icon icon-in"></i></a></div>
-          <!--end soc-->
-        </div>
+    <div class="footer__map">
+      <div id="map" class="footer__map-container"></div>
+      <div class="footer__map-social">
+        <div class="footer__map-title">Follow Us</div>
+        <!--begin soc-->
+        <div class="soc"><a href="#" class="soc__link soc__link_in"><svg class="icon icon-in"><use xlink:href="img/sprite.svg#icon-in"></use></svg></a></div>
+        <!--end soc-->
       </div>
-      <!--end map-in-->
     </div>
     <div class="footer__bot">
       <div class="container">
@@ -208,7 +204,7 @@
     }
     google.maps.event.addDomListener(window, 'load', initMap);
   </script>
-  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCvPiVe7YAjq0L-k9SvcDojzZrgBH46vds&amp;callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="js/app.js"></script>
 </body>
 

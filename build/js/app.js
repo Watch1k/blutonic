@@ -89,50 +89,59 @@ $(document).ready(function(){
 	})();
 
 	(function() {
-		var allButtons = $('.accordion__title'),
-				allPanels = $('.accordion__inner');
+		var allButtons = $('.js-accordion-title'),
+				allPanels = $('.js-accordion-inner');
 
-		$('.accordion__title').click(function() {
-			if (!$(this).hasClass('is-active')) {
+		allButtons.click(function() {
+			if (!$(this).parent().hasClass('is-active')) {
 				allPanels.slideUp();
-				allButtons.removeClass('is-active');
-				$(this).addClass('is-active').children('.accordion__inner').slideDown();
+				allButtons.parent().removeClass('is-active');
+				$(this).parent().addClass('is-active').children().last().slideDown();
 				return false;
 			} else {
-				$(this).removeClass('is-active').children('.accordion__inner').slideUp();
+				$(this).parent().removeClass('is-active').children().last().slideUp();
 			}
 		});
 	})();
 
 	(function () {
-		if ($('.tabs-for').length) {
-			var currentHeight = 0;
+		var tabs = $('.js-tabs');
+		if (tabs.length) {
+			$(window).resize(function () {
+				tabs.css({height: 'auto'});
+			});
+			var tabsItem = $('.js-tabs-item'),
+					tabsButton = $('.js-tabs-btn'),
+					currentHeight = 0;
 
-			currentHeight = $('.tabs-for__item.is-active').outerHeight();
-			$('.tabs-for__item').next('.tabs-for__item').hide();
-			$('.tabs-for').css({height: currentHeight});
+			currentHeight = tabsItem.outerHeight();
+			tabsItem.next().hide();
+			tabs.css({height: currentHeight});
 
-			$('.media_platform .media__item').on('click', function () {
+			tabsButton.on('click', function () {
 				var index = $(this).index(),
 						tabsHeight = 0;
-				$('.media_platform .media__item').removeClass('is-active');
+				tabsButton.removeClass('is-active');
 				$(this).addClass('is-active');
-				$('.tabs-for__item').fadeOut().promise().done(function () {
-					tabsHeight = $('.tabs-for__item').eq(index).outerHeight();
-					$('.tabs-for').css({height: tabsHeight});
-					$('.tabs-for__item').eq(index).fadeIn();
+				tabsItem.fadeOut().promise().done(function () {
+					tabsHeight = tabsItem.eq(index).outerHeight();
+					tabs.css({height: tabsHeight});
+					tabsItem.eq(index).fadeIn();
 				});
 			});
 		}
 	})();
 
 	(function () {
-		$('.slider').owlCarousel({
-			loop: true,
-			nav: false,
-			dots: true,
-			items: 1
-		});
+		var slider = $('.js-slider');
+		if (slider.length) {
+			slider.owlCarousel({
+				loop: true,
+				nav: false,
+				dots: true,
+				items: 1
+			});
+		}
 	})();
 
 });

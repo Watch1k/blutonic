@@ -37,8 +37,8 @@ block content
 				.career__accordion.accordion
 					// begin accordion item
 					.accordion__title
-						.accordion__title-in Ad Operations <i class="icon-title"></i>
-						.accordion__inner.doc
+						.accordion__title-in.js-accordion-title Ad Operations <i class="icon-title"></i>
+						.accordion__inner.doc.js-accordion-inner
 							p An Account Manager's job is to facilitate and oversee the success and monetization of media inventory on a daily basis. This includes, but it not limited to the following:
 							p.doc__title Campaign Management
 							ul.doc__list
@@ -63,8 +63,8 @@ block content
 
 					// begin accordion item
 					.accordion__title
-						.accordion__title-in Publisher Development Manager <i class="icon-title"></i>
-						.accordion__inner.doc
+						.accordion__title-in.js-accordion-title Publisher Development Manager <i class="icon-title"></i>
+						.accordion__inner.doc.js-accordion-inner
 							p An Account Manager's job is to facilitate and oversee the success and monetization of media inventory on a daily basis. This includes, but it not limited to the following:
 							p.doc__title Campaign Management
 							ul.doc__list
@@ -89,8 +89,8 @@ block content
 
 					// begin accordion item
 					.accordion__title
-						.accordion__title-in Account Manager <i class="icon-title"></i>
-						.accordion__inner.doc
+						.accordion__title-in.js-accordion-title Account Manager <i class="icon-title"></i>
+						.accordion__inner.doc.js-accordion-inner
 							p An Account Manager's job is to facilitate and oversee the success and monetization of media inventory on a daily basis. This includes, but it not limited to the following:
 							p.doc__title Campaign Management
 							ul.doc__list
@@ -123,29 +123,26 @@ block footer
 						img.footer__img(src='img/content/footer-logo.png' alt='logo')
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-geo
+						.foot-el__icon
+							+i('geo')
 						.foot-el__info
 							.foot-el__name Address
 							.foot-el__text bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036
 				.footer__col
 					.footer__foot-el.foot-el
-						.foot-el__img
-							i.icon.icon-email
+						.foot-el__icon
+							+i('email')
 						.foot-el__info
 							.foot-el__name Email
 							a.foot-el__text(href='mailto:info@blutonic.com') info@blutonic.com
-		.footer__map-wrap
-			.footer__map#map
-			//begin map-in
-			.map-in
-				.map-in__inner
-					.map-in__title Follow Us
-					//begin soc
-					.soc
-						a.soc__link(href='#'): i.icon.icon-in
-					//end soc
-			//end map-in
+		.footer__map
+			.footer__map-container#map
+			.footer__map-social
+				.footer__map-title Follow Us
+				//begin soc
+				.soc
+					a.soc__link.soc__link_in(href='#'): +i('in')
+				//end soc
 		.footer__bot
 			.container
 				.footer__copyright Copyright © 2016, blutonic. All Rights Reserved.

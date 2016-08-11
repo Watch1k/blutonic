@@ -35,15 +35,15 @@
             <!--begin media-->
             <div class="media">
               <div class="media__item">
-                <div class="media__avatar"><img src="img/content/advert-desktop.png" srcset="img/content/advert-desktop@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-desktop-lg"><use xlink:href="img/sprite.svg#icon-desktop-lg"></use></svg></div>
                 <div class="media__title">Desktop</div>
               </div>
               <div class="media__item">
-                <div class="media__avatar"><img src="img/content/advert-mobile.png" srcset="img/content/advert-mobile@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-mobile-lg"><use xlink:href="img/sprite.svg#icon-mobile-lg"></use></svg></div>
                 <div class="media__title">Mobile</div>
               </div>
               <div class="media__item">
-                <div class="media__avatar"><img src="img/content/advert-tv.png" srcset="img/content/advert-tv@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-tv-lg"><use xlink:href="img/sprite.svg#icon-tv-lg"></use></svg></div>
                 <div class="media__title">TV</div>
               </div>
             </div>
@@ -61,15 +61,15 @@
             <!--begin media-->
             <div class="media">
               <div class="media__item">
-                <div class="media__avatar"><img src="img/content/advert-video.png" srcset="img/content/advert-video@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-video"><use xlink:href="img/sprite.svg#icon-video"></use></svg></div>
                 <div class="media__title">Video</div>
               </div>
               <div class="media__item">
-                <div class="media__avatar"><img src="img/content/advert-display.png" srcset="img/content/advert-display@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-display"><use xlink:href="img/sprite.svg#icon-display"></use></svg></div>
                 <div class="media__title">Display</div>
               </div>
               <div class="media__item">
-                <div class="media__avatar"><img src="img/content/advert-native.png" srcset="img/content/advert-native@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-native"><use xlink:href="img/sprite.svg#icon-native"></use></svg></div>
                 <div class="media__title">Native</div>
               </div>
             </div>
@@ -87,19 +87,19 @@
             <!--begin media-->
             <div class="media media_4 media_white">
               <div class="media__item">
-                <div class="media__avatar"><i class="icon icon-advert-service"></i></div>
+                <div class="media__icon"><svg class="icon icon-service"><use xlink:href="img/sprite.svg#icon-service"></use></svg></div>
                 <div class="media__title media__title_mod">Managed Services</div>
               </div>
               <div class="media__item">
-                <div class="media__avatar"><i class="icon icon-advert-tag"></i></div>
+                <div class="media__icon"><svg class="icon icon-tag"><use xlink:href="img/sprite.svg#icon-tag"></use></svg></div>
                 <div class="media__title media__title_mod">VAST / VPAID Tag</div>
               </div>
               <div class="media__item">
-                <div class="media__avatar"><i class="icon icon-advert-deal"></i></div>
+                <div class="media__icon"><svg class="icon icon-deal"><use xlink:href="img/sprite.svg#icon-deal"></use></svg></div>
                 <div class="media__title media__title_mod">Deal ID</div>
               </div>
               <div class="media__item">
-                <div class="media__avatar"><i class="icon icon-advert-rtb"></i></div>
+                <div class="media__icon"><svg class="icon icon-rtb"><use xlink:href="img/sprite.svg#icon-rtb"></use></svg></div>
                 <div class="media__title media__title_mod">RTB</div>
               </div>
             </div>
@@ -169,7 +169,7 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-geo"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-geo"><use xlink:href="img/sprite.svg#icon-geo"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Address</div>
               <div class="foot-el__text">bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036</div>
@@ -178,25 +178,21 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-email"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-email"><use xlink:href="img/sprite.svg#icon-email"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Email</div><a href="mailto:info@blutonic.com" class="foot-el__text">info@blutonic.com</a></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer__map-wrap">
-      <div id="map" class="footer__map"></div>
-      <!--begin map-in-->
-      <div class="map-in">
-        <div class="map-in__inner">
-          <div class="map-in__title">Follow Us</div>
-          <!--begin soc-->
-          <div class="soc"><a href="#" class="soc__link"><i class="icon icon-in"></i></a></div>
-          <!--end soc-->
-        </div>
+    <div class="footer__map">
+      <div id="map" class="footer__map-container"></div>
+      <div class="footer__map-social">
+        <div class="footer__map-title">Follow Us</div>
+        <!--begin soc-->
+        <div class="soc"><a href="#" class="soc__link soc__link_in"><svg class="icon icon-in"><use xlink:href="img/sprite.svg#icon-in"></use></svg></a></div>
+        <!--end soc-->
       </div>
-      <!--end map-in-->
     </div>
     <div class="footer__bot">
       <div class="container">
@@ -226,7 +222,7 @@
     }
     google.maps.event.addDomListener(window, 'load', initMap);
   </script>
-  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCvPiVe7YAjq0L-k9SvcDojzZrgBH46vds&amp;callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="js/app.js"></script>
 </body>
 

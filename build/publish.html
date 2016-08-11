@@ -36,7 +36,9 @@
             <div class="section__subtitle section__subtitle_mod subtitle">With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.</div>
             <!--begin info-->
             <div class="publish__info info info_right">
-              <div class="info__col"><img src="img/content/publish-in.png" srcset="img/content/publish-in@2x.png 2x" alt="image" class="info__img"></div>
+              <div class="info__col">
+                <div class="info__icon"><svg class="icon icon-publish-1"><use xlink:href="img/sprite.svg#icon-publish-1"></use></svg></div>
+              </div>
               <div class="info__col">
                 <ul class="info__list list">
                   <li class="list__item">Cross Screen Compatibility</li>
@@ -51,7 +53,9 @@
             <div class="section__subtitle section__subtitle_mod subtitle">With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.</div>
             <!--begin info-->
             <div class="publish__info info info_right">
-              <div class="info__col"><img src="img/content/publish-out.png" srcset="img/content/publish-out@2x.png 2x" alt="image" class="info__img"></div>
+              <div class="info__col">
+                <div class="info__icon"><svg class="icon icon-publish-2"><use xlink:href="img/sprite.svg#icon-publish-2"></use></svg></div>
+              </div>
               <div class="info__col">
                 <ul class="info__list list">
                   <li class="list__item">Multiple Ad Formats</li>
@@ -74,7 +78,9 @@
             <div class="section__subtitle subtitle">With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.</div>
             <!--begin info-->
             <div class="publish__info info">
-              <div class="info__col"><img src="img/content/publish-display.png" srcset="img/content/publish-display@2x.png 2x" alt="image" class="info__img"></div>
+              <div class="info__col">
+                <div class="info__icon"><svg class="icon icon-publish-3"><use xlink:href="img/sprite.svg#icon-publish-3"></use></svg></div>
+              </div>
               <div class="info__col">
                 <ul class="info__list info__list_top list">
                   <li class="list__item">Guaranteed Fill</li>
@@ -99,7 +105,9 @@
             <div class="section__subtitle subtitle">With a combination of internal fraud prevention data and the use of 3rd Party verification partners, we ensure our inventory is brand safe.</div>
             <!--begin info-->
             <div class="publish__info info info_right">
-              <div class="info__col"><img src="img/content/publish-native.png" srcset="img/content/publish-native@2x.png 2x" alt="image" class="info__img"></div>
+              <div class="info__col">
+                <div class="info__icon"><svg class="icon icon-publish-4"><use xlink:href="img/sprite.svg#icon-publish-4"></use></svg></div>
+              </div>
               <div class="info__col">
                 <ul class="info__list info__list list">
                   <li class="list__item">Simple Implementation</li>
@@ -141,7 +149,7 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-geo"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-geo"><use xlink:href="img/sprite.svg#icon-geo"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Address</div>
               <div class="foot-el__text">bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036</div>
@@ -150,25 +158,21 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-email"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-email"><use xlink:href="img/sprite.svg#icon-email"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Email</div><a href="mailto:info@blutonic.com" class="foot-el__text">info@blutonic.com</a></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer__map-wrap">
-      <div id="map" class="footer__map"></div>
-      <!--begin map-in-->
-      <div class="map-in">
-        <div class="map-in__inner">
-          <div class="map-in__title">Follow Us</div>
-          <!--begin soc-->
-          <div class="soc"><a href="#" class="soc__link"><i class="icon icon-in"></i></a></div>
-          <!--end soc-->
-        </div>
+    <div class="footer__map">
+      <div id="map" class="footer__map-container"></div>
+      <div class="footer__map-social">
+        <div class="footer__map-title">Follow Us</div>
+        <!--begin soc-->
+        <div class="soc"><a href="#" class="soc__link soc__link_in"><svg class="icon icon-in"><use xlink:href="img/sprite.svg#icon-in"></use></svg></a></div>
+        <!--end soc-->
       </div>
-      <!--end map-in-->
     </div>
     <div class="footer__bot">
       <div class="container">
@@ -198,7 +202,7 @@
     }
     google.maps.event.addDomListener(window, 'load', initMap);
   </script>
-  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCvPiVe7YAjq0L-k9SvcDojzZrgBH46vds&amp;callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="js/app.js"></script>
 </body>
 

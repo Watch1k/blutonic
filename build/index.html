@@ -40,7 +40,7 @@
           <div class="media__item">
             <div class="media__ratio">
               <div class="media__content">
-                <div class="media__avatar"><img src="img/content/advert-video.png" srcset="img/content/advert-video@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-video"><use xlink:href="img/sprite.svg#icon-video"></use></svg></div>
                 <div class="media__title">Video</div>
               </div>
             </div>
@@ -59,7 +59,7 @@
           <div class="media__item">
             <div class="media__ratio">
               <div class="media__content">
-                <div class="media__avatar"><img src="img/content/advert-display.png" srcset="img/content/advert-display@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-display"><use xlink:href="img/sprite.svg#icon-display"></use></svg></div>
                 <div class="media__title">Display</div>
               </div>
             </div>
@@ -78,7 +78,7 @@
           <div class="media__item">
             <div class="media__ratio">
               <div class="media__content">
-                <div class="media__avatar"><img src="img/content/advert-native.png" srcset="img/content/advert-native@2x.png 2x" alt="image" class="media__img"></div>
+                <div class="media__icon"><svg class="icon icon-native"><use xlink:href="img/sprite.svg#icon-native"></use></svg></div>
                 <div class="media__title">Native</div>
               </div>
             </div>
@@ -105,19 +105,19 @@
             <div class="section__title title title_white">Platforms</div>
             <!--begin media-->
             <div class="media media_platform">
-              <div class="media__item is-active">
+              <div class="media__item is-active js-tabs-btn">
                 <div class="media__avatar">
                   <div class="media__icon"><svg class="icon icon-mobile"><use xlink:href="img/sprite.svg#icon-mobile"></use></svg></div>
                 </div>
                 <div class="media__title">Mobile</div>
               </div>
-              <div class="media__item">
+              <div class="media__item js-tabs-btn">
                 <div class="media__avatar">
                   <div class="media__icon"><svg class="icon icon-desktop"><use xlink:href="img/sprite.svg#icon-desktop"></use></svg></div>
                 </div>
                 <div class="media__title">Desktop</div>
               </div>
-              <div class="media__item">
+              <div class="media__item js-tabs-btn">
                 <div class="media__avatar">
                   <div class="media__icon"><svg class="icon icon-tv"><use xlink:href="img/sprite.svg#icon-tv"></use></svg></div>
                 </div>
@@ -133,17 +133,17 @@
       <section class="section section_tabs">
         <div class="container">
           <div class="advert__container">
-            <div class="tabs-for">
-              <div class="tabs-for__item is-active">
+            <div class="tabs-for js-tabs">
+              <div class="tabs-for__item js-tabs-item">
+                <div class="tabs-for__title">Mobile</div>
+                <div class="tabs-for__text">Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.</div>
+              </div>
+              <div class="tabs-for__item js-tabs-item">
                 <div class="tabs-for__title">Mobile</div>
                 <div class="tabs-for__text">Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags. Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products.
                   Integration is easy: Server-to-server, API, SDK, or tags.</div>
               </div>
-              <div class="tabs-for__item">
-                <div class="tabs-for__title">Mobile</div>
-                <div class="tabs-for__text">Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.</div>
-              </div>
-              <div class="tabs-for__item">
+              <div class="tabs-for__item js-tabs-item">
                 <div class="tabs-for__title">Mobile</div>
                 <div class="tabs-for__text">Monetize iOS, Android, Windows, Blackberry apps or mobile websites with our mobile products. Integration is easy: Server-to-server, API, SDK, or tags.</div>
               </div>
@@ -154,27 +154,30 @@
       <!--end section-->
       <!--begin section-->
       <section class="section section_tools">
-        <div class="container">
-          <div class="section__title title title_white">Publisher Tools</div>
-          <!--begin slider-->
-          <div class="slider">
-            <div class="slider__item">
+        <div class="section__title title title_white">Publisher Tools</div>
+        <!--begin slider-->
+        <div class="slider js-slider">
+          <div class="slider__item">
+            <div class="slider__container container">
               <div class="slider__title">Global Support</div>
               <div class="slider__text">Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization. Our team of experts works closely with publishers to facilitate business growth - all the way
                 from ad set-up to rigorous revenue optimization.</div><a href="#" class="slider__blue-btn blue-btn blue-btn_light">Read more <i class="icon"></i></a></div>
-            <div class="slider__item">
+          </div>
+          <div class="slider__item">
+            <div class="slider__container container">
               <div class="slider__title">Global Support</div>
               <div class="slider__text">Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.</div><a href="#" class="slider__blue-btn blue-btn blue-btn_light">Read more <i class="icon"></i></a></div>
-            <div
-              class="slider__item">
+          </div>
+          <div class="slider__item">
+            <div class="slider__container container">
               <div class="slider__title">Global Support</div>
               <div class="slider__text">Our team of experts works closely with publishers to facilitate business growth - all the way from ad set-up to rigorous revenue optimization.</div><a href="#" class="slider__blue-btn blue-btn blue-btn_light">Read more <i class="icon"></i></a></div>
+          </div>
         </div>
         <!--end slider-->
-  </div>
-  </section>
-  <!--end section-->
-  </main>
+      </section>
+      <!--end section-->
+    </main>
   </div>
   <footer class="footer">
     <!--begin section-->
@@ -201,7 +204,7 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-geo"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-geo"><use xlink:href="img/sprite.svg#icon-geo"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Address</div>
               <div class="foot-el__text">bluTonic, Inc. 5757 Wilshire Blvd,<br>Ste 601, Los Angeles, CA 90036</div>
@@ -210,25 +213,21 @@
         </div>
         <div class="footer__col">
           <div class="footer__foot-el foot-el">
-            <div class="foot-el__img"><i class="icon icon-email"></i></div>
+            <div class="foot-el__icon"><svg class="icon icon-email"><use xlink:href="img/sprite.svg#icon-email"></use></svg></div>
             <div class="foot-el__info">
               <div class="foot-el__name">Email</div><a href="mailto:info@blutonic.com" class="foot-el__text">info@blutonic.com</a></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer__map-wrap">
-      <div id="map" class="footer__map"></div>
-      <!--begin map-in-->
-      <div class="map-in">
-        <div class="map-in__inner">
-          <div class="map-in__title">Follow Us</div>
-          <!--begin soc-->
-          <div class="soc"><a href="#" class="soc__link"><i class="icon icon-in"></i></a></div>
-          <!--end soc-->
-        </div>
+    <div class="footer__map">
+      <div id="map" class="footer__map-container"></div>
+      <div class="footer__map-social">
+        <div class="footer__map-title">Follow Us</div>
+        <!--begin soc-->
+        <div class="soc"><a href="#" class="soc__link soc__link_in"><svg class="icon icon-in"><use xlink:href="img/sprite.svg#icon-in"></use></svg></a></div>
+        <!--end soc-->
       </div>
-      <!--end map-in-->
     </div>
     <div class="footer__bot">
       <div class="container">
@@ -258,7 +257,7 @@
     }
     google.maps.event.addDomListener(window, 'load', initMap);
   </script>
-  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCvPiVe7YAjq0L-k9SvcDojzZrgBH46vds&amp;callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="js/app.js"></script>
 </body>
 
