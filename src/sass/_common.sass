@@ -464,6 +464,8 @@ img
 	font-size: 72px
 	color: $gray
 	text-transform: uppercase
+	+vertical
+	text-align: center
 	&__video
 		position: absolute
 		top: 50%
@@ -498,10 +500,13 @@ img
 	+r(767)
 		height: 380px
 	&__title
+		display: inline-block
 		padding: 0 100px
 		width: 100%
 		+pf-medium
 		text-align: center
+		vertical-align: middle
+		white-space: normal
 		+r(1199)
 			font-size: 60px
 			padding: 0 50px
