@@ -16,21 +16,53 @@
 
 <body>
   <div class="wrapper">
-    <header class="header header_home">
+    <!--begin nav-->
+    <nav class="nav js-nav">
+      <div class="nav__close js-nav-close">
+        <div class="nav__close-icon"></div>
+      </div>
+      <div class="nav__in"><a href="index.html" class="nav__link is-active">Home</a><a href="publish.html" class="nav__link">Publisher Solutions</a><a href="advert.html" class="nav__link">Advertisers</a><a href="career.html" class="nav__link">Careers</a><a href="contact.html"
+          class="nav__link">Contact</a><a href="about.html" class="nav__link">About</a></div>
+    </nav>
+    <!--end nav-->
+    <header class="header js-header">
       <div class="header__container container">
-        <a href="index.html" class="header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo" class="header__logo-img"></a><button class="header__nav-toggle"><span class="header__icon"></span></button></div>
+        <a href="index.html" class="header__logo"><img src="img/logo.png" alt="logo" class="header__logo-img"></a><button class="header__nav-toggle js-toggle"><span class="header__icon"></span></button></div>
     </header>
     <main class="main">
       <!--begin subheader-->
-      <div class="subheader subheader_home">
-        <div class="subheader__title text-blue container">Dynamic Solutions
-          <ul class="subheader__list">
-            <li class="subheader__list-item">Video</li>
-            <li class="subheader__list-item">Display</li>
-            <li class="subheader__list-item">Native</li>
-            <li class="subheader__list-item">Rich Media</li>
-          </ul>
+      <div class="subheader subheader_home"><video playsinline autoplay muted loop poster="img/bg/home-bg.jpg" class="subheader__video js-video"><source src="img/video/blutonic.mp4" type="video/mp4"></video>
+        <!--begin slider-->
+        <div class="subheader__slider">
+          <div class="subheader__item">
+            <div class="subheader__title text-blue container">The Next Generation
+              <ul class="subheader__list">
+                <li class="subheader__list-item">SSP</li>
+              </ul>
+            </div>
+          </div>
+          <div class="subheader__item">
+            <div class="subheader__title text-blue container">Cross Screen
+              <ul class="subheader__list">
+                <li class="subheader__list-item">Mobile</li>
+                <li class="subheader__list-item">Tablet</li>
+                <li class="subheader__list-item">cTV/OTT</li>
+                <li class="subheader__list-item">Desktop</li>
+              </ul>
+            </div>
+          </div>
+          <div class="subheader__item">
+            <div class="subheader__title text-blue container">Dynamic Solutions
+              <ul class="subheader__list">
+                <li class="subheader__list-item">Video</li>
+                <li class="subheader__list-item">Display</li>
+                <li class="subheader__list-item">Native</li>
+                <li class="subheader__list-item">Rich Media</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <!--end slider-->
       </div>
       <!--end subheader-->
       <!--begin section-->

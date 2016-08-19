@@ -144,4 +144,36 @@ $(document).ready(function(){
 		}
 	})();
 
+	(function () {
+		var header = $('.js-header');
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > 10) {
+				if (!header.hasClass('is-active')) {
+					header.addClass('is-active');
+				}
+			} else {
+				if (header.hasClass('is-active')) {
+					header.removeClass('is-active');
+				}
+			}
+		});
+	})();
+
+	(function () {
+		var toggleBtn = $('.js-toggle'),
+				nav = $('.js-nav'),
+				navCloseBtn = $('.js-nav-close'),
+				header = $('.js-header');
+
+		toggleBtn.on('click', function () {
+			nav.addClass('is-active');
+			header.addClass('is-hidden');
+		});
+
+		navCloseBtn.on('click', function () {
+			nav.removeClass('is-active');
+			header.removeClass('is-hidden');
+		});
+	})();
+
 });

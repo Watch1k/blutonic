@@ -4,21 +4,51 @@ block title
 	title Index
 
 block header
-	header.header.header_home
+	//begin nav
+	nav.nav.js-nav
+		.nav__close.js-nav-close
+			.nav__close-icon
+		.nav__in
+			a.nav__link.is-active(href='index.html') Home
+			a.nav__link(href='publish.html') Publisher Solutions
+			a.nav__link(href='advert.html') Advertisers
+			a.nav__link(href='career.html') Careers
+			a.nav__link(href='contact.html') Contact
+			a.nav__link(href='about.html') About
+	//end nav
+	header.header.js-header
 		.header__container.container
 			a.header__logo(href='index.html')
-				img.header__logo-img(src='img/logo.png' srcset='img/logo@2x.png 2x' alt='logo')
-			button.header__nav-toggle
+				img.header__logo-img(src='img/logo.png' alt='logo')
+			button.header__nav-toggle.js-toggle
 				span.header__icon
+
 block content
 	//begin subheader
 	.subheader.subheader_home
-		.subheader__title.text-blue.container Dynamic Solutions
-			ul.subheader__list
-				li.subheader__list-item Video
-				li.subheader__list-item Display
-				li.subheader__list-item Native
-				li.subheader__list-item Rich Media
+		video.subheader__video.js-video(playsinline autoplay muted loop poster="img/bg/home-bg.jpg")
+			source(src="img/video/blutonic.mp4" type="video/mp4")
+		//begin slider
+		.subheader__slider
+			.subheader__item
+				.subheader__title.text-blue.container The Next Generation
+					ul.subheader__list
+						li.subheader__list-item SSP
+			.subheader__item
+				.subheader__title.text-blue.container Cross Screen
+					ul.subheader__list
+						li.subheader__list-item Mobile
+						li.subheader__list-item Tablet
+						li.subheader__list-item cTV/OTT
+						li.subheader__list-item Desktop
+			.subheader__item
+				.subheader__title.text-blue.container Dynamic Solutions
+					ul.subheader__list
+						li.subheader__list-item Video
+						li.subheader__list-item Display
+						li.subheader__list-item Native
+						li.subheader__list-item Rich Media
+		//end slider
 	//end subheader
 
 	//begin section
