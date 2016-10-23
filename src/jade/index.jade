@@ -4,9 +4,17 @@ block title
 	title Index
 
 block header
+	header.header.js-header
+		.header__container.container
+			h1.header__h1 Blutonic
+			a.header__logo(href='index.html')
+				img.header__logo-img(src='img/logo.png' alt='logo')
+			button.header__nav-toggle.js-toggle
+				span.header__icon
+
+block content
 	//begin nav
 	nav.nav.js-nav
-		h2 lol
 		.nav__close.js-nav-close
 			.nav__close-icon
 		.nav__in
@@ -17,15 +25,6 @@ block header
 			a.nav__link(href='contact.html') Contact
 			a.nav__link(href='about.html') Careers
 	//end nav
-	header.header.js-header
-		.header__container.container
-			h1.header__h1 Blutonic
-			a.header__logo(href='index.html')
-				img.header__logo-img(src='img/logo.png' alt='logo')
-			button.header__nav-toggle.js-toggle
-				span.header__icon
-
-block content
 	//begin subheader
 	section.subheader.subheader_home
 		video.subheader__video.js-video(autoplay muted loop poster="img/bg/home-bg.jpg")
