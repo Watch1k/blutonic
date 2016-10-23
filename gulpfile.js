@@ -80,7 +80,7 @@ gulp.task('sass', function() {
 
     return streamqueue({ objectMode: true },
         sass('src/sass/*.sass', {
-            sourcemap: true,
+            // sourcemap: true,
             style: 'compact'
         })
             .on('error', function(err) {
@@ -89,12 +89,12 @@ gulp.task('sass', function() {
             .pipe(postcss(processors))
             .pipe(rigger())
             // .pipe(rename({suffix: '.min'}))
-            .pipe(sourcemaps.write('./'))
+            // .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest('build/css/')),
         gulp.src(src.root + '/css/*.css')
     )
-        .pipe(concat('screen.css'))
-        // .pipe(cssmin())
+        .pipe(concat('screen.min.css'))
+        .pipe(cssmin())
         .pipe(gulp.dest('build/css'))
 });
 

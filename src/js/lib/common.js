@@ -1,5 +1,6 @@
 /* Common JS */
 $(document).ready(function(){
+	$('<link href="css/screen.min.css" rel="stylesheet" type="text/css">').appendTo('head');
 
 	//for IE9
 	svg4everybody();
